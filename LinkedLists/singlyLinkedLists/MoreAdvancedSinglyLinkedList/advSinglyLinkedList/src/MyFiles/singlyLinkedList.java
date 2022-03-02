@@ -93,10 +93,13 @@ public class singlyLinkedList {
             count = count.next;
         }
     }
-
-
-
-
-    // reverse() - reverses the list
-
+    public void reverse() {
+        Node prev = null;
+        while(head != null){
+            Node next_node = head.next;
+            head.next = prev;
+            prev = head;
+            head = next_node;
+        }
+    }
 }
